@@ -4,7 +4,7 @@ import json
 import datetime
 import os
 def tts(msg):
-    cmd = f'spd-say -l es -y female2 "{msg}"'
+    cmd = f'spd-say -l es -y "Spanish (Spain)+female2" "{msg}"'
     os.system(cmd)
 def callback(d: dict):
     if d.get("event") == "message":
