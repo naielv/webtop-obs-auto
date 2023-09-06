@@ -13,7 +13,7 @@ WORKDIR $HOME
 RUN sudo add-apt-repository -y ppa:obsproject/obs-studio
 RUN sudo apt update
 RUN sudo apt-get install obs-studio speech-dispatcher python3-pip -y
-RUN pip3 install requests
+RUN sudo -H pip3 install requests
 
 COPY ./obs.json $HOME/Desktop/OBSScenes.json
 COPY ./c.py $HOME/Desktop/c.py
